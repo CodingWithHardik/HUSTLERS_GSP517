@@ -74,7 +74,7 @@ def get_gemini_pro_vision_response(
         except IndexError:
             pass
     return "".join(final_response)
-
+# By CloudHustlers
 
 st.header("Vertex AI Gemini 1.0 API", divider="rainbow")
 text_model_pro, multimodal_model_pro = load_models()
@@ -138,7 +138,7 @@ with tab1:
         temperature = 0.95
 
     max_output_tokens = 2048
-
+    # By CloudHustlers
     prompt = f"""Write a {length_of_story} story based on the following premise: \n
     character_name: {character_name} \n
     character_type: {character_type} \n
@@ -160,6 +160,7 @@ with tab1:
         # st.write(prompt)
         with st.spinner("Generating your story using Gemini 1.0 Pro ..."):
             first_tab1, first_tab2 = st.tabs(["Story", "Prompt"])
+            #HUSTLERS517
             with first_tab1:
                 response = get_gemini_pro_text_response(
                     text_model_pro,
